@@ -2,8 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #2c3e50, #8e44ad); /* Градиентный фон */
-    color: #ecf0f1; /* Цвет текста */
+    background: linear-gradient(to bottom, #2c3e50, #8e44ad);
+    color: #ecf0f1;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .header-content {
@@ -20,10 +20,10 @@ header {
 }
 
 .profile-photo {
-    width: 150px; /* Ширина фотографии */
-    height: 150px; /* Высота фотографии */
-    border-radius: 50%; /* Круглая форма */
-    margin-right: 20px; /* Отступ справа */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .intro h1 {
@@ -37,78 +37,78 @@ header {
 
 section {
     padding: 20px;
-    text-align: center; /* Центрируем текст в секциях */
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для секций */
-    border-radius: 10px; /* Закругленные углы */
-    margin: 20px; /* Отступ между секциями */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 20px;
 }
 
 h2 {
-    color: #ffeb3b; /* Цвет заголовков */
-    margin-bottom: 15px; /* Отступ снизу */
+    color: #ffeb3b;
+    margin-bottom: 15px;
 }
 
 .skills-container {
-    display: flex; /* Используем Flexbox для выравнивания */
-    justify-content: center; /* Центрируем иконки по горизонтали */
-    flex-wrap: nowrap; /* Не разрешаем перенос строк */
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .skill-card {
     display: flex;
-    flex-direction: column; /* Вертикальное выравнивание содержимого */
-    align-items: center; /* Центрируем содержимое */
-    margin: 10px; /* Отступ между иконками */
-    padding: 15px; /* Отступ внутри карточки */
-    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для карточек */
-    border-radius: 10px; /* Закругленные углы */
-    cursor: pointer; /* Указатель при наведении */
-    transition: transform 0.3s; /* Плавный переход */
-    width: 120px; /* Ширина карточки */
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 120px;
 }
 
 .skill-card:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
+    transform: scale(1.05);
 }
 
 .skill-card i {
-    font-size: 50px; /* Размер иконок */
-    color: #ff6347; /* Цвет иконок */
-    margin-bottom: 10px; /* Отступ снизу */
+    font-size: 50px;
+    color: #ff6347;
+    margin-bottom: 10px;
 }
 
 .quote-button {
-    background-color: #ff6347; /* Цвет кнопки цитаты */
+    background-color: #ff6347;
     color: white;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .quote-button:hover {
-    background-color: #ff4500; /* Более темный цвет при наведении */
-    transform: translateY(-3px); /* Эффект поднятия при наведении */
+    background-color: #ff4500;
+    transform: translateY(-3px);
 }
 
 .discord-button {
-    background-color: #7289da; /* Цвет кнопки Discord */
+    background-color: #7289da;
     color: white;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+    transition: background-color 0.3s, transform 0.3s;
     display: inline-block;
     text-align: center;
 }
 
 .discord-button:hover {
-    background-color: #5b6eae; /* Более темный цвет при наведении */
-    transform: translateY(-3px); /* Эффект поднятия при наведении */
+    background-color: #5b6eae;
+    transform: translateY(-3px);
 }
 
 footer {
@@ -117,57 +117,56 @@ footer {
 }
 
 .modal {
-    display: none; /* Скрыть модальное окно по умолчанию */
+    display: none;
     position: fixed;
-    z-index: 1; /* Поверх остальных элементов */
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Полная ширина */
-    height: 100%; /* Полная высота */
-    overflow: auto; /* Включить прокрутку, если необходимо */
-    background-color: rgba(0,0,0,0.8); /* Черный фон с прозрачностью */
-    transition: opacity 0.3s ease; /* Плавный переход */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    transition: opacity 0.3s ease;
 }
 
 .modal-content {
-    background-color: #222; /* Темный фон для модального окна */
-    margin: 15% auto; /* 15% сверху и центрировать */
+    background-color: #222;
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%; /* Ширина 60% */
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для модального окна */
-    animation: slideIn 0.5s; /* Анимация при открытии */
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s;
 }
 
 .close {
     color: #aaa;
-    float: right; /* Правый край */
+    float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #fff; /* Белый цвет при наведении */
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
 }
 
 @keyframes slideIn {
     from {
-        opacity: 0; /* Начальная непрозрачность */
-        transform: translateY(-50px); /* Смещение вверх */
+        opacity: 0;
+        transform: translateY(-50px);
     }
     to {
-        opacity: 1; /* Полная непрозрачность */
-        transform: translateY(0); /* Вернуться в исходное положение */
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Центрирование кнопки "Связь со мной" */
 .contact-container {
-    display: flex; /* Используем Flexbox для выравнивания */
-    justify-content: center; /* Центрируем содержимое по горизонтали */
-    margin-top: 20px; /* Отступ сверху */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
