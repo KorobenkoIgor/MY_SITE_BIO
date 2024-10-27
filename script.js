@@ -42,9 +42,9 @@ function showSkillDetails(skill) {
 
     document.getElementById("skill-title").innerText = title;
     document.getElementById("skill-description").innerText = description;
-    document.getElementById("skill-details").style.display = "block"; // Показываем модальное окно
+    document.getElementById("skill-details").style.display = "block";
 }
 
 function closeModal() {
-    document.getElementById("skill-details").style.display = "none"; // Скрываем модальное окно
+    document.getElementById("skill-details").style.display = "none";
 }
