@@ -5,6 +5,16 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #2c3e50, #8e44ad);
     color: #ecf0f1;
+    animation: fadeIn 1s; /* Добавление анимации при загрузке страницы */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 header {
@@ -44,6 +54,11 @@ section {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     margin: 20px;
+    transition: transform 0.3s; /* Анимация при наведении */
+}
+
+section:hover {
+    transform: scale(1.02);
 }
 
 h2 {
@@ -54,7 +69,7 @@ h2 {
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Центрируем навыки */
+    justify-content: center;
     gap: 10px; /* Отступы между иконками */
 }
 
@@ -67,12 +82,13 @@ h2 {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Добавлена тень */
     width: 120px; /* Ширина карточек */
 }
 
 .skill-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Эффект тени при наведении */
 }
 
 .skill-card i {
@@ -89,11 +105,12 @@ h2 {
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s; /* Анимация при наведении */
 }
 
 .quote-button:hover {
     background-color: #ff4500;
+    transform: translateY(-2px); /* Эффект поднятия при наведении */
 }
 
 /* Стиль для кнопки "Написать в Discord" */
@@ -142,46 +159,61 @@ h2 {
     max-width: 600px;
     border-radius: 10px;
     color: #ecf0f1;
+    animation: fadeIn 0.5s; /* Анимация появления модала */
 }
 
 .close {
     color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
     cursor: pointer;
 }
 
 /* Стили для футера */
 footer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #ccc;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Медиа-запросы */
+/* Адаптивные стили */
 @media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Поменяем направление на колонку на мобильных устройствах */
+    }
+
+    .skill-card {
+        width: 90%; /* Ширина карточек на мобильных */
+        margin: 10px auto; /* Центрирование карточек */
+    }
+
+    header {
+        flex-direction: column; /* Выровнять заголовок по центру */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 10px;
+    }
+
     .profile-photo {
         width: 100px;
         height: 100px;
     }
 
-    .header-content {
-        flex-direction: column;
+    h1 {
+        font-size: 1.5em; /* Меньший размер заголовка */
     }
 
-    /* Сетка навыков для мобильных */
-    .skills-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Две колонки */
-        gap: 10px; /* Отступы между иконками */
-    }
-
-    .skill-card {
-        width: 80px; /* Меньше размер карточек для мобильных */
+    h2 {
+        font-size: 1.2em; /* Меньший размер подзаголовка */
     }
 }
