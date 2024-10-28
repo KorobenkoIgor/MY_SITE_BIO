@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио Игоря</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Подключаем иконки -->
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="your-photo.jpg" alt="Игорь" class="profile-photo">
+            <img src="your-photo.jpg" alt="Игорь" class="profile-photo"> <!-- Замените your-photo.jpg на путь к вашей фотографии -->
             <div class="intro">
                 <h1>Привет! Я Игорь</h1>
                 <p>Программист, работающий с Python и Flask</p>
@@ -21,20 +21,20 @@
     <section id="skills">
         <h2>Навыки</h2>
         <div class="skills-container">
-            <div class="skill-card" onclick="openModal('python-modal')">
-                <i class="fab fa-python"></i>
+            <div class="skill-card" onclick="openModal('Python')">
+                <i class="fab fa-python"></i> <!-- Иконка Python -->
                 <p>Python</p>
             </div>
-            <div class="skill-card" onclick="openModal('flask-modal')">
-                <i class="fas fa-code"></i>
+            <div class="skill-card" onclick="openModal('Flask')">
+                <i class="fas fa-code"></i> <!-- Иконка Flask -->
                 <p>Flask</p>
             </div>
-            <div class="skill-card" onclick="openModal('development-modal')">
-                <i class="fas fa-desktop"></i>
+            <div class="skill-card" onclick="openModal('Разработка приложений')">
+                <i class="fas fa-desktop"></i> <!-- Иконка разработки -->
                 <p>Разработка приложений</p>
             </div>
-            <div class="skill-card" onclick="openModal('remote-modal')">
-                <i class="fas fa-tools"></i>
+            <div class="skill-card" onclick="openModal('Удаленный доступ')">
+                <i class="fas fa-tools"></i> <!-- Иконка удаленного доступа -->
                 <p>Удаленный доступ</p>
             </div>
         </div>
@@ -57,50 +57,22 @@
 
     <section id="contact">
         <h2>Связь со мной</h2>
-        <div class="contact-container">
-            <a href="https://discord.com/users/1296499094520594473" class="discord-button" target="_blank">
-                <i class="fab fa-discord"></i> Написать в Discord
-            </a>
-        </div>
+        <a href="https://discord.com/users/1296499094520594473" class="discord-button" target="_blank">Написать в Discord</a>
     </section>
 
     <footer>
         <p>Все права защищены. Ваши права конфиденциальности соблюдаются.</p>
     </footer>
 
-    <!-- Модальные окна -->
-    <div id="python-modal" class="modal">
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('python-modal')">&times;</span>
-            <h2>Python</h2>
-            <p>Описание навыка Python...</p>
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
         </div>
     </div>
 
-    <div id="flask-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('flask-modal')">&times;</span>
-            <h2>Flask</h2>
-            <p>Описание навыка Flask...</p>
-        </div>
-    </div>
-
-    <div id="development-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('development-modal')">&times;</span>
-            <h2>Разработка приложений</h2>
-            <p>Описание навыка разработки приложений...</p>
-        </div>
-    </div>
-
-    <div id="remote-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('remote-modal')">&times;</span>
-            <h2>Удаленный доступ</h2>
-            <p>Описание навыка удаленного доступа...</p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Подключаем JavaScript файл -->
 </body>
 </html>
