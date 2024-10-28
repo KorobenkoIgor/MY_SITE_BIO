@@ -34,9 +34,10 @@ header {
 }
 
 .profile-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 120px; /* Ширина изображения */
+    height: 120px; /* Высота изображения */
+    border-radius: 50%; /* Закругление для круглой формы */
+    object-fit: cover; /* Заполнение без искажения пропорций */
     margin: 10px 20px;
 }
 
