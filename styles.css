@@ -20,7 +20,6 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row;
-    max-width: 100%;
     text-align: center;
 }
 
@@ -32,7 +31,6 @@ header {
 }
 
 .intro h1 {
-    margin: 0;
     font-size: 1.8em;
 }
 
@@ -50,15 +48,14 @@ section {
 
 h2 {
     color: #ffeb3b;
-    margin-bottom: 15px;
 }
 
 /* Стили для карточек навыков */
 .skills-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .skill-card {
@@ -91,14 +88,12 @@ h2 {
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
-    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: transform 0.3s;
 }
 
 .quote-button:hover, .discord-button:hover {
     background-color: #ff4500;
-    transform: translateY(-3px);
 }
 
 /* Модальное окно */
@@ -110,46 +105,27 @@ h2 {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0,0,0,0.8);
-    transition: opacity 0.3s ease;
 }
 
 .modal-content {
     background-color: #222;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    animation: slideIn 0.5s;
+    color: #ecf0f1;
 }
 
 .close {
     color: #aaa;
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 20px;
     font-size: 28px;
     font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #fff;
-    text-decoration: none;
     cursor: pointer;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Центрирование кнопки "Связь со мной" */
@@ -163,80 +139,23 @@ h2 {
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 20px;
-    font-size: 0.9em;
     background-color: rgba(0, 0, 0, 0.6);
     color: #ccc;
-    margin: 0 auto;
 }
 
-/* Медиа-запросы для мобильных устройств */
+/* Медиа-запросы */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .header-content {
-        flex-direction: column;
-    }
-
     .profile-photo {
         width: 100px;
         height: 100px;
-        margin-bottom: 15px;
-    }
-
-    .intro h1 {
-        font-size: 1.5em;
     }
 
     section {
         margin: 10px;
-        padding: 15px;
-    }
-
-    .skills-container {
-        flex-direction: row;
-        gap: 5px;
-    }
-
-    .skill-card {
-        width: 80px;
-        padding: 10px;
-    }
-
-    .quote-button, .discord-button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-
-    .modal-content {
-        width: 90%;
     }
 
     footer {
         padding: 15px;
-        font-size: 0.8em;
-        text-align: center;
-        margin: 0 auto;
-    }
-}
-
-/* Медиа-запросы для больших экранов */
-@media (min-width: 1200px) {
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .intro h1 {
-        font-size: 2.2em;
-    }
-
-    .quote-button, .discord-button {
-        padding: 12px 24px;
     }
 }
