@@ -55,7 +55,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Позволяет оборачивать элементы на узких экранах */
 }
 
 .skill-card {
@@ -182,6 +182,12 @@ footer {
     }
 
     .skills-container {
-        flex-direction: column;
+        flex-direction: row; /* Убедитесь, что навыки остаются в ряд на мобильных */
+        justify-content: center; /* Центрируем навыки */
+        flex-wrap: wrap; /* Обернем элементы, если не хватает места */
+    }
+    
+    .skill-card {
+        width: 80px; /* Меньше размер карточек для мобильных */
     }
 }
