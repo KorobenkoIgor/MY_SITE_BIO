@@ -12,23 +12,27 @@ header {
     justify-content: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
+    flex-wrap: wrap;
 }
 
 .header-content {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    max-width: 100%;
+    text-align: center;
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin: 10px 20px;
 }
 
 .intro h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .intro p {
@@ -48,10 +52,12 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* Стили для карточек навыков */
 .skills-container {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .skill-card {
@@ -64,7 +70,7 @@ h2 {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s;
-    width: 120px;
+    width: 100px;
 }
 
 .skill-card:hover {
@@ -72,12 +78,13 @@ h2 {
 }
 
 .skill-card i {
-    font-size: 50px;
+    font-size: 40px;
     color: #ff6347;
     margin-bottom: 10px;
 }
 
-.quote-button {
+/* Кнопки */
+.quote-button, .discord-button {
     background-color: #ff6347;
     color: white;
     border: none;
@@ -88,34 +95,12 @@ h2 {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.quote-button:hover {
+.quote-button:hover, .discord-button:hover {
     background-color: #ff4500;
     transform: translateY(-3px);
 }
 
-.discord-button {
-    background-color: #7289da;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    display: inline-block;
-    text-align: center;
-}
-
-.discord-button:hover {
-    background-color: #5b6eae;
-    transform: translateY(-3px);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-}
-
+/* Модальное окно */
 .modal {
     display: none;
     position: fixed;
@@ -134,7 +119,8 @@ footer {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%;
+    width: 80%;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     animation: slideIn 0.5s;
@@ -165,8 +151,71 @@ footer {
     }
 }
 
+/* Центрирование кнопки "Связь со мной" */
 .contact-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .intro h1 {
+        font-size: 1.5em;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .skills-container {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .skill-card {
+        width: 80px;
+        padding: 10px;
+    }
+
+    .quote-button, .discord-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* Медиа-запросы для больших экранов */
+@media (min-width: 1200px) {
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .intro h1 {
+        font-size: 2.2em;
+    }
+
+    .quote-button, .discord-button {
+        padding: 12px 24px;
+    }
 }
