@@ -82,7 +82,7 @@ h2 {
 }
 
 /* Кнопки */
-.quote-button, .discord-button {
+.quote-button {
     background-color: #ff6347;
     color: white;
     border: none;
@@ -92,8 +92,34 @@ h2 {
     transition: transform 0.3s;
 }
 
-.quote-button:hover, .discord-button:hover {
+.quote-button:hover {
     background-color: #ff4500;
+}
+
+/* Стиль для кнопки "Написать в Discord" */
+.discord-button {
+    background-color: #5865F2; /* Синий цвет Discord */
+    color: #ffffff;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discord-button i {
+    margin-right: 8px; /* Отступ для иконки Discord */
+    font-size: 1.2em;
+}
+
+.discord-button:hover {
+    background-color: #4752C4; /* Более темный синий при наведении */
 }
 
 /* Модальное окно */
@@ -151,11 +177,11 @@ footer {
         height: 100px;
     }
 
-    section {
-        margin: 10px;
+    .header-content {
+        flex-direction: column;
     }
 
-    footer {
-        padding: 15px;
+    .skills-container {
+        flex-direction: column;
     }
 }
