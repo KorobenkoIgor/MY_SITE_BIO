@@ -53,9 +53,9 @@ h2 {
 /* Стили для карточек навыков */
 .skills-container {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap; /* Позволяет оборачивать элементы на узких экранах */
+    flex-wrap: wrap; /* Позволяет оборачивать элементы */
+    justify-content: center; /* Центрируем навыки */
+    gap: 10px; /* Отступы между иконками */
 }
 
 .skill-card {
@@ -68,7 +68,7 @@ h2 {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s;
-    width: 100px;
+    width: 100px; /* Ширина карточек */
 }
 
 .skill-card:hover {
@@ -154,13 +154,6 @@ h2 {
     cursor: pointer;
 }
 
-/* Центрирование кнопки "Связь со мной" */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 /* Стили для футера */
 footer {
     display: flex;
@@ -181,12 +174,13 @@ footer {
         flex-direction: column;
     }
 
+    /* Сетка навыков для мобильных */
     .skills-container {
-        flex-direction: row; /* Убедитесь, что навыки остаются в ряд на мобильных */
-        justify-content: center; /* Центрируем навыки */
-        flex-wrap: wrap; /* Обернем элементы, если не хватает места */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: 10px; /* Отступы между иконками */
     }
-    
+
     .skill-card {
         width: 80px; /* Меньше размер карточек для мобильных */
     }
