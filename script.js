@@ -1,50 +1,34 @@
-const quotes = [
-    "Только те, кто рискует зайти слишком далеко, могут узнать, как далеко можно зайти. - Т.S. Элиот",
-    "Не бойтесь изменений. Иногда они хороши. - Эрик Шмидт",
-    "Успех — это способность идти от одной неудачи к другой, не теряя энтузиазма. - Уинстон Черчилль",
-    "Ваше время ограничено, не тратьте его, живя чужой жизнью. - Стив Джобс",
-    "Программирование — это как искусство, где ты создаешь свой собственный мир. - Аноним",
-    "Каждая ошибка — это шаг к успеху. - Аноним",
-    "Программирование — это не только код, это решение задач. - Аноним",
-    "Никогда не останавливайтесь на достигнутом. - Аноним",
-    "Ваши идеи могут изменить мир. - Аноним",
-    "Код должен быть написан так, чтобы его было легко читать. - Аноним"
-];
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+// Закрытие модального окна при нажатии вне его
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach((modal) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+};
 
 function getRandomQuote() {
+    const quotes = [
+        "Только те, кто рискует зайти слишком далеко, могут узнать, как далеко можно зайти. - Т.S. Элиот",
+        "Великие дела начинаются с маленьких шагов.",
+        "Неудачи – это просто ступени к успеху.",
+        "Не сдавайтесь. Обычно последнее ключевое усилие – это ключ к успеху.",
+        "Учитесь на каждом шаге. Учёба никогда не заканчивается.",
+        "Верьте в себя и всегда продолжайте.",
+        "Секрет успеха в постоянстве цели.",
+        "Ваши возможности безграничны.",
+        "Ставьте цели и работайте, пока они не станут реальностью.",
+        "Успех – это путешествие, а не пункт назначения."
+    ];
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    document.getElementById("quote-text").innerText = quotes[randomIndex];
-}
-
-function showSkillDetails(skill) {
-    let title, description;
-    switch (skill) {
-        case 'python':
-            title = "Python";
-            description = "Python — это высокоуровневый язык программирования, который используется для веб-разработки, анализа данных, машинного обучения и многого другого.";
-            break;
-        case 'flask':
-            title = "Flask";
-            description = "Flask — это легкий веб-фреймворк для Python, который позволяет быстро разрабатывать веб-приложения.";
-            break;
-        case 'app-development':
-            title = "Разработка приложений";
-            description = "Создание приложений для различных платформ с использованием современных технологий.";
-            break;
-        case 'remote-access':
-            title = "Удаленный доступ";
-            description = "Настройка и использование удаленного доступа для работы с клиентами и решения проблем.";
-            break;
-        default:
-            title = "Неизвестный навык";
-            description = "Описание не найдено.";
-    }
-
-    document.getElementById("skill-title").innerText = title;
-    document.getElementById("skill-description").innerText = description;
-    document.getElementById("skill-details").style.display = "block";
-}
-
-function closeModal() {
-    document.getElementById("skill-details").style.display = "none";
+    document.getElementById('quote-text').innerText = quotes[randomIndex];
 }
