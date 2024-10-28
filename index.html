@@ -21,19 +21,19 @@
     <section id="skills">
         <h2>Навыки</h2>
         <div class="skills-container">
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('python-modal')">
                 <i class="fab fa-python"></i>
                 <p>Python</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('flask-modal')">
                 <i class="fas fa-code"></i>
                 <p>Flask</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('development-modal')">
                 <i class="fas fa-desktop"></i>
                 <p>Разработка приложений</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('remote-modal')">
                 <i class="fas fa-tools"></i>
                 <p>Удаленный доступ</p>
             </div>
@@ -65,6 +65,39 @@
     <footer>
         <p>Все права защищены. Ваши права конфиденциальности соблюдаются.</p>
     </footer>
+
+    <!-- Модальные окна -->
+    <div id="python-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('python-modal')">&times;</span>
+            <h2>Python</h2>
+            <p>Описание навыка Python...</p>
+        </div>
+    </div>
+
+    <div id="flask-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('flask-modal')">&times;</span>
+            <h2>Flask</h2>
+            <p>Описание навыка Flask...</p>
+        </div>
+    </div>
+
+    <div id="development-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('development-modal')">&times;</span>
+            <h2>Разработка приложений</h2>
+            <p>Описание навыка разработки приложений...</p>
+        </div>
+    </div>
+
+    <div id="remote-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('remote-modal')">&times;</span>
+            <h2>Удаленный доступ</h2>
+            <p>Описание навыка удаленного доступа...</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
